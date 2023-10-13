@@ -15,8 +15,8 @@ PrintNumbers();
 
 Console.WriteLine("<<<<<< 2 >>>>>>");
 static void PrintOdds(){
-  for(int j=1; j<=255; j+=2){
-    Console.WriteLine(j);
+  for(int i=1; i<=255; i+=2){
+    Console.WriteLine(i);
   }
 }
 PrintOdds();
@@ -31,9 +31,9 @@ PrintOdds();
 Console.WriteLine("<<<<<< 3 >>>>>>");
 static void PrintSum(){   
   int sum = 0;
-  for(int l=0; l<=255; l++){
-    sum+=l;
-    Console.WriteLine($"New number: {l} Sum: {sum}");
+  for(int i=0; i<=255; i++){
+    sum+=i;
+    Console.WriteLine($"New number: {i} Sum: {sum}");
   }
 }
 
@@ -43,9 +43,9 @@ PrintSum();
 // Write a function that would iterate through each item of the given integer array and print each value to the console.
 
 Console.WriteLine("<<<<<< 4 >>>>>>");
-int[] numero = new int[10];
-for(int m=0; m<numero.Length; m++){
-  numero[m] = (m+1) * 3;
+int[] multiplos = new int[10];
+for(int i=0; i<multiplos.Length; i++){
+  multiplos[i] = (i+1) * 3;
 }
 
 static void LoopArray(int[] numbers)
@@ -55,7 +55,7 @@ static void LoopArray(int[] numbers)
   }
 }
 
-LoopArray(numero);
+LoopArray(multiplos);
 
 // 5. Encuentra el valor máximo
 // Write a function that takes an integer array and prints and returns the maximum value in the array. 
@@ -66,16 +66,16 @@ Console.WriteLine("<<<<<< 5 >>>>>>");
 static int FindMax(int[] numbers){
   int max = numbers[0]; 
 
-  for (int n=1; n<numbers.Length; n++){
-    if (numbers[n] > max){
-      max = numbers[n];
+  for (int i=1; i<numbers.Length; i++){
+    if (numbers[i] > max){
+      max = numbers[i];
     }
   }
-  Console.WriteLine($"el numero mayor en el array es {max}");
-  return max; 
+  return max;
 }
 int[] valores = new int[]{-8,5,0,-10,-15,2};
-int mayor = FindMax(valores);
+int bMax = FindMax(valores);
+Console.WriteLine($"el numero mayor en el array es {bMax}");
 
 // 6. Obtén el Promedio
 // Write a function that takes an integer array and prints the AVERAGE of the values in the array.
@@ -90,19 +90,20 @@ static void GetAverage(int[] numbers){
   Console.WriteLine($"El promedio es {sum/numbers.Length}");    
 }
 
-int[] numbers = new int[]{5,3,25,10};
-GetAverage(numbers);
+int[] numPromedio = new int[]{5,3,25,10};
+GetAverage(numPromedio);
 
 // 7. Lista con números impares
 // Write a function that creates, and then returns, a List that contains all the odd numbers between 1 to 255. 
 // When the program is done, the List should have the values of [1, 3, 5, 7, ... 255].
 
 Console.WriteLine("<<<<<< 7 >>>>>>");
+
 static List<int> OddList(){
   List<int> imp = new List<int>();
-  for(int o=1; o<=255; o++){
-    if(o%2 != 0){
-      imp.Add(o);
+  for(int i=1; i<=255; i++){
+    if(i%2 != 0){
+      imp.Add(i);
     }
   }
   return imp;
@@ -132,7 +133,7 @@ static int GreaterThanY(List<int> numbers, int y){
 }
 
 List<int> num = new List<int>(){5,-8,6,7,-10};
-int cantidad = GreaterThanY(num,6);
+int cantidad = GreaterThanY(num,3);
 Console.WriteLine(cantidad);
 
 // 9. Haz Cuadrar los Valores​
